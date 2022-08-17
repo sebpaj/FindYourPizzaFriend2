@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { trpc } from "./trpc";
 
 import "./index.css";
+import SignIn from "./components/SignIn";
 
 const client = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => {
     <trpc.Provider client={trpcClient} queryClient={client}>
       <QueryClientProvider client={client}>
         <AppContent />
+        <SignIn />
       </QueryClientProvider>
     </trpc.Provider>
   );
